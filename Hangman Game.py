@@ -2,16 +2,14 @@
 
 import random
 list_of_words = ["laiba", "intern", "Pakistan", "Python", "Cyber_security"]
-word = random.choice(list_of_words)
+word = random.choice(list_of_words).lower()
 
 guessed_letters = []
 incorrect_guesses = 0
 max_guesses = 6
 print("\n---Welcome to Hangman Game---\n===================================")
-print(f"You have to {max_guesses} incorrect guesses allowed.\n")
-
-while incorrect_guesses < max_guesses:
-    display = " "
+while True:
+    display = ""
     for char in word:
         if char in guessed_letters:
             display +=char +" "
